@@ -1,4 +1,5 @@
 const appElement = document.querySelector(".app");
+let levelValue = "";
 
 appElement.innerHTML = `
      <div class="modal modal_start">
@@ -36,4 +37,13 @@ appElement.innerHTML = `
 
 const startButtonElement = document.querySelector(".modal__button");
 
-startButtonElement.addEventListener("click",()=>console.log("object"))
+startButtonElement.addEventListener("click", () => {
+  const inputElements = document.querySelectorAll(".modal__input");
+
+  for (const inputElement of inputElements) {
+    if (!inputElement.checked) continue;
+    levelValue = inputElement.value;
+    break;
+  }
+  console.log(levelValue);
+});
