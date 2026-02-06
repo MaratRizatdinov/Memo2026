@@ -4,12 +4,15 @@
 }
 
 @font-face {
-  font-family: "StratosSkyeng";
-  src: local("StratosSkyeng"), url("./fonts/stratosskyengweb-regular.woff2") format("woff2"), url("//fonts/stratosskyengweb-regular.woff") format("woff");
+  font-family: 'StratosSkyeng';
+  src:
+    local('StratosSkyeng'),
+    url('./fonts/stratosskyengweb-regular.woff2') format('woff2'),
+    url('//fonts/stratosskyengweb-regular.woff') format('woff');
   font-weight: normal;
 }
 body {
-  font-family: "StratosSkyeng", sans-serif;
+  font-family: 'StratosSkyeng', sans-serif;
   background: rgb(0, 73, 128);
   height: 100vh;
   display: flex;
@@ -79,4 +82,4 @@ body {
   line-height: 32px;
   letter-spacing: 0%;
   margin-top: 67px;
-}/*# sourceMappingURL=style.css.map */
+} /*# sourceMappingURL=style.css.map */

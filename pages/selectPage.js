@@ -1,4 +1,4 @@
-import { appRouter } from "../index.js";
+import { appRouter } from '../index.js';
 export const selectPage = (appElement, state) => {
   appElement.innerHTML = `
      <div class="modal modal_start">
@@ -34,17 +34,17 @@ export const selectPage = (appElement, state) => {
       </div>
 `;
 
-  const startButtonElement = document.querySelector(".modal__button");
+  const startButtonElement = document.querySelector('.modal__button');
 
-  startButtonElement.addEventListener("click", () => {
-    const inputElements = document.querySelectorAll(".modal__input");
+  startButtonElement.addEventListener('click', () => {
+    const inputElements = document.querySelectorAll('.modal__input');
 
     for (const inputElement of inputElements) {
       if (!inputElement.checked) continue;
       state.gamevalue = inputElement.value;
-      state.gameStatus = "game";
+      state.gameStatus = 'game';
       appRouter(appElement, state);
       break;
-    }    
+    }
   });
 };
