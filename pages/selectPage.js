@@ -30,7 +30,7 @@ export const selectPage = (appElement, state) => {
           />
           <label class="modal__label" for="radio3">3</label>
         </div>
-        <div class="modal__button">Старт</div>
+        <div class="modal__button button">Старт</div>
       </div>
 `;
 

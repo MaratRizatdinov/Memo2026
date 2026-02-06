@@ -4,15 +4,12 @@
 }
 
 @font-face {
-  font-family: 'StratosSkyeng';
-  src:
-    local('StratosSkyeng'),
-    url('./fonts/stratosskyengweb-regular.woff2') format('woff2'),
-    url('//fonts/stratosskyengweb-regular.woff') format('woff');
+  font-family: "StratosSkyeng";
+  src: local("StratosSkyeng"), url("./fonts/stratosskyengweb-regular.woff2") format("woff2"), url("//fonts/stratosskyengweb-regular.woff") format("woff");
   font-weight: normal;
 }
 body {
-  font-family: 'StratosSkyeng', sans-serif;
+  font-family: "StratosSkyeng", sans-serif;
   background: rgb(0, 73, 128);
   height: 100vh;
   display: flex;
@@ -69,6 +66,52 @@ body {
   letter-spacing: 0px;
 }
 .modal__button {
+  margin-top: 67px;
+}
+
+.gamefield {
+  width: 1024px;
+  height: 774px;
+  display: flex;
+  flex-direction: column;
+  box-sizing: border-box;
+  background-color: #ccc;
+}
+.gamefield__header {
+  box-sizing: border-box;
+  margin-top: 41px;
+  margin-left: 22px;
+  margin-right: 22px;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  height: 72px;
+}
+.gamefield__timer {
+  color: rgb(255, 255, 255);
+  font-size: 64px;
+  font-weight: 400;
+  line-height: 72px;
+  letter-spacing: 0px;
+  text-align: left;
+  position: relative;
+}
+.gamefield__timer::before, .gamefield__timer::after {
+  position: absolute;
+  content: "min";
+  top: -20px;
+  left: 40px;
+  font-size: 16px;
+  line-height: 32px;
+  letter-spacing: 0%;
+  text-align: left;
+}
+.gamefield__timer::after {
+  content: "sec";
+  left: 125px;
+}
+
+.button {
   width: 246px;
   height: 50px;
   border-radius: 12px;
@@ -81,5 +124,4 @@ body {
   font-weight: 400;
   line-height: 32px;
   letter-spacing: 0%;
-  margin-top: 67px;
-} /*# sourceMappingURL=style.css.map */
+}/*# sourceMappingURL=style.css.map */
