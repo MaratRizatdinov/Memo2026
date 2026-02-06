@@ -1,49 +1,14 @@
+import { selectPage } from "./pages/selectPage.js";
+import { gamePage } from "./pages/gamePage.js";
 const appElement = document.querySelector(".app");
-let levelValue = "";
 
-appElement.innerHTML = `
-     <div class="modal modal_start">
-        <h1 class="modal__title">Выбери сложность</h1>
-        <div class="modal__checkbox">
-          <input
-            class="modal__input"
-            type="radio"
-            id="radio1"
-            name="radios"
-            value="1"
-            checked
-          />
-          <label class="modal__label" for="radio1">1</label>
-          <input
-            class="modal__input"
-            type="radio"
-            id="radio2"
-            name="radios"
-            value="2"
-          />
-          <label class="modal__label" for="radio2">2</label>
-          <input
-            class="modal__input"
-            type="radio"
-            id="radio3"
-            name="radios"
-            value="3"
-          />
-          <label class="modal__label" for="radio3">3</label>
-        </div>
-        <div class="modal__button">Старт</div>
-      </div>
-`;
+const state = {
+  gameStatus: "start",
+  gamevalue: "",
+};
 
-const startButtonElement = document.querySelector(".modal__button");
-
-startButtonElement.addEventListener("click", () => {
-  const inputElements = document.querySelectorAll(".modal__input");
-
-  for (const inputElement of inputElements) {
-    if (!inputElement.checked) continue;
-    levelValue = inputElement.value;
-    break;
-  }
-  console.log(levelValue);
-});
+export const appRouter = (appElement, state) => {
+  if (state.gameStatus === "start") selectPage(appElement, state);
+  if (state.gameStatus === "game") gamePage(appElement, state);
+};
+appRouter(appElement, state);
