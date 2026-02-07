@@ -110,14 +110,27 @@ body {
   content: "sec";
   left: 125px;
 }
+.gamefield__container {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
 .gamefield__cards {
   box-sizing: border-box;
   margin-top: 35px;
-  padding-left: 26px;
-  padding-right: 22px;
   display: grid;
-  grid-template-columns: repeat(36, 1fr);
   gap: 15px;
+  justify-content: center;
+  align-items: center;
+}
+.gamefield__cards_easy {
+  grid-template-columns: repeat(3, 1fr);
+}
+.gamefield__cards_medium {
+  grid-template-columns: repeat(4, 1fr);
+}
+.gamefield__cards_hard {
+  grid-template-columns: repeat(6, 1fr);
 }
 
 .button {
@@ -140,10 +153,41 @@ body {
   width: 95px;
   height: 133px;
   background-color: #fff;
-  grid-column: span 4;
+  grid-column: span 1;
   border-radius: 4px;
   box-sizing: border-box;
   display: flex;
+}
+.card_close {
   align-items: center;
   justify-content: center;
+}
+.card_open {
+  padding: 6px;
+  flex-direction: column;
+  align-items: center;
+  justify-content: space-between;
+}
+.card__top, .card__bottom {
+  position: relative;
+  color: rgb(0, 0, 0);
+  font-size: 24px;
+  font-weight: 400;
+  line-height: 32px;
+  letter-spacing: -1px;
+  align-self: flex-start;
+}
+.card__bottom {
+  align-self: flex-end;
+  rotate: 180deg;
+}
+.card__image {
+  position: absolute;
+  width: 6px;
+  height: 6px;
+  top: 30px;
+  left: 3.5px;
+}
+.card__image_ten {
+  left: 11px;
 }/*# sourceMappingURL=style.css.map */

@@ -5,6 +5,7 @@ const appElement = document.querySelector('.app');
 const state = {
   gameStatus: 'start',
   gamevalue: '',
+  gameCards: [],
 };
 
 export const appRouter = (appElement, state) => {

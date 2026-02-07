@@ -110,14 +110,27 @@ body {
       left: 125px;
     }
   }
+  &__container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+  }
   &__cards {
     box-sizing: border-box;
-    margin-top: 35px;
-    padding-left: 26px;
-    padding-right: 22px;
-    display: grid;
-    grid-template-columns: repeat(36, 1fr);
+    margin-top: 35px;    
+    display: grid;    
     gap: 15px;
+    justify-content: center;
+    align-items: center;
+    &_easy{
+      grid-template-columns: repeat(3, 1fr);
+    }
+    &_medium{
+      grid-template-columns: repeat(4, 1fr);
+    }
+    &_hard{
+      grid-template-columns: repeat(6, 1fr);
+    }
   }
 }
 .button {
@@ -139,10 +152,42 @@ body {
   width: 95px;
   height: 133px;
   background-color: #fff;
-  grid-column: span 4;
-  border-radius: 4px;  
+  grid-column: span 1;
+  border-radius: 4px;
   box-sizing: border-box;
   display: flex;
-  align-items: center;
-  justify-content: center;
+  &_close {
+    align-items: center;
+    justify-content: center;
+  }
+  &_open {
+    padding: 6px;
+    flex-direction: column;
+    align-items: center;
+    justify-content: space-between;
+  }
+  &__top,
+  &__bottom {
+    position: relative;
+    color: rgba(0, 0, 0, 1);
+    font-size: 24px;
+    font-weight: 400;
+    line-height: 32px;
+    letter-spacing: -1px;
+    align-self: flex-start;
+  }
+  &__bottom {
+    align-self: flex-end;
+    rotate: 180deg;
+  }
+  &__image {
+    position: absolute;
+    width: 6px;
+    height: 6px;
+    top: 30px;
+    left: 3.5px;
+    &_ten {
+      left: 11px;
+    }
+  }
 }
