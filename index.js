@@ -11,4 +11,4 @@ export const appRouter = (appElement, state) => {
   if (state.gameStatus === 'start') selectPage(appElement, state);
   if (state.gameStatus === 'game') gamePage(appElement, state);
 };
-// appRouter(appElement, state);
+appRouter(appElement, state);

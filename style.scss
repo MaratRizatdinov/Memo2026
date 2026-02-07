@@ -76,7 +76,6 @@ body {
   display: flex;
   flex-direction: column;
   box-sizing: border-box;
-  background-color: #ccc;
   &__header {
     box-sizing: border-box;
     margin-top: 41px;
@@ -111,6 +110,15 @@ body {
       left: 125px;
     }
   }
+  &__cards {
+    box-sizing: border-box;
+    margin-top: 35px;
+    padding-left: 26px;
+    padding-right: 22px;
+    display: grid;
+    grid-template-columns: repeat(36, 1fr);
+    gap: 15px;
+  }
 }
 .button {
   width: 246px;
@@ -125,4 +133,16 @@ body {
   font-weight: 400;
   line-height: 32px;
   letter-spacing: 0%;
+}
+.card {
+  /* рубашка */
+  width: 95px;
+  height: 133px;
+  background-color: #fff;
+  grid-column: span 4;
+  border-radius: 4px;  
+  box-sizing: border-box;
+  display: flex;
+  align-items: center;
+  justify-content: center;
 }
