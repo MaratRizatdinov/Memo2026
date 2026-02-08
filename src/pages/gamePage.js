@@ -1,4 +1,5 @@
 import { renderCards } from '../scripts/renderCards.js';
+import { appRouter } from '../index.js';
 
 export const gamePage = (appElement, state) => {
   const level =
@@ -19,6 +20,17 @@ export const gamePage = (appElement, state) => {
         </div> 
       </div>     
      `;
+
+  const resetButton = document.querySelector('.gamefield__button');
+  resetButton.addEventListener('click', () => {
+    state = {
+      gameStatus: 'start',
+      gamevalue: '',
+      gameCards: [],
+      gameClickedCards: [],
+    };
+    appRouter(state);
+  });
 
   const cardField = document.querySelector('.gamefield__cards');
 

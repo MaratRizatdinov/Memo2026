@@ -46,7 +46,7 @@ export const selectPage = (appElement, state) => {
       state.gamevalue = inputElement.value;
       state.gameStatus = 'game';
       state.gameCards = getGameCards(inputElement.value);
-      appRouter(appElement, state);
+      appRouter(state);
       break;
     }
   });

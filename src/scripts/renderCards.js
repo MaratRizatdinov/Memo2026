@@ -1,5 +1,4 @@
-export const renderCards = (cardField, state) => {
-  console.log(state);
+export const renderCards = (cardField, state) => {  
   const cardDeck = state.gameCards;
   let cardsContent = '';
 
