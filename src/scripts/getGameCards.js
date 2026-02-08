@@ -41,6 +41,7 @@ export const getGameCards = (level) => {
   const newDeck = shuffleDeck
     .concat(structuredClone(shuffleDeck))
     .sort(() => Math.random() - 0.5);
+    
   const deckWithId = newDeck.map((card) =>
     Object.assign(card, { id: crypto.randomUUID() }),
   );

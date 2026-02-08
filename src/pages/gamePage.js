@@ -28,6 +28,7 @@ export const gamePage = (appElement, state) => {
       gamevalue: '',
       gameCards: [],
       gameClickedCards: [],
+      gameTimer: 0,
     };
     appRouter(state);
   });
@@ -41,6 +42,7 @@ export const gamePage = (appElement, state) => {
     state.gameCards = cardDeck.map((card) =>
       Object.assign(card, { visible: 'close' }),
     );
+    state.gameTimer = Date.now();
 
     renderCards(cardField, state);
   }, 5000);
