@@ -1,0 +1,30 @@
+<svg viewBox="0 0 95 133" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" width="95.000000" height="133.000000" fill="none" clip-path="url(#clipPath_0)" customFrame="url(#clipPath_0)">
+	<mask id="mask_1" width="73.277763" height="82.382416" x="0.000000" y="0.000000" maskUnits="objectBoundingBox">
+		<g filter="url(#pixso_custom_mask_type_alpha)">
+			<path id="Union" d="M36.639 0C16.4041 0 0.000379381 12.3737 0.000379381 27.6374L31.5514 27.6374C13.7244 29.5055 0.000326119 41.049 0.000326119 55.0106L31.5396 55.0106C13.7182 56.8824 0 68.424 0 82.3825L73.2773 82.3825C73.2773 68.424 59.5591 56.8824 41.7377 55.0106L73.2776 55.0106C73.2776 41.049 59.5535 29.5055 41.7265 27.6374L73.2777 27.6374C73.2777 12.3737 56.874 0 36.639 0Z" fill="rgb(39,26,88)" fill-rule="evenodd" transform="matrix(0.648029,0.761616,-0.761616,0.648029,52.0671,31.5012)" />
+		</g>
+	</mask>
+	<mask id="mask_0" width="83.000000" height="121.000000" x="6.000000" y="6.000000" maskUnits="userSpaceOnUse">
+		<g filter="url(#pixso_custom_mask_type_alpha)">
+			<rect id="Rectangle 8" width="83.000000" height="121.000000" x="6.000000" y="6.000000" rx="4.000000" fill="rgb(228,251,255)" />
+		</g>
+	</mask>
+	<defs>
+		<clipPath id="clipPath_0">
+			<rect width="95.000000" height="133.000000" x="0.000000" y="0.000000" rx="4.000000" fill="rgb(255,255,255)" />
+		</clipPath>
+		<filter id="pixso_custom_mask_type_alpha">
+			<feColorMatrix type="matrix" values="0 0 0 0 1 0 0 0 0 1 0 0 0 0 1 0 0 0 1 0 " />
+		</filter>
+	</defs>
+	<rect id="рубашка" width="95.000000" height="133.000000" x="0.000000" y="0.000000" rx="4.000000" fill="rgb(255,255,255)" />
+	<rect id="Rectangle 7" width="83.000000" height="121.000000" x="6.000000" y="6.000000" rx="4.000000" fill="rgb(193.8,244.8,255)" />
+	<g id="Mask group" mask="url(#mask_0)">
+		<g id="Group 18376">
+			<path id="Union" d="M36.639 0C16.4041 0 0.000379381 12.3737 0.000379381 27.6374L31.5514 27.6374C13.7244 29.5055 0.000326119 41.049 0.000326119 55.0106L31.5396 55.0106C13.7182 56.8824 0 68.424 0 82.3825L73.2773 82.3825C73.2773 68.424 59.5591 56.8824 41.7377 55.0106L73.2776 55.0106C73.2776 41.049 59.5535 29.5055 41.7265 27.6374L73.2777 27.6374C73.2777 12.3737 56.874 0 36.639 0Z" fill="rgb(161,237,255)" fill-rule="evenodd" transform="matrix(0.648029,0.761616,-0.761616,0.648029,52.0671,31.5012)" />
+			<g mask="url(#mask_1)">
+				<circle id="Ellipse 426" cx="25.0280876" cy="25.0280876" r="25.0280876" fill="rgb(116.875,228.551,255)" transform="matrix(0.494043,-0.869438,0.869438,0.494043,27.7362,69.0373)" />
+			</g>
+		</g>
+	</g>
+</svg>

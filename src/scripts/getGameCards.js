@@ -6,16 +6,16 @@ export const getGameCards = (level) => {
     let img = '';
     switch (suite) {
       case 'S':
-        img = 'src/img/spades.svg';
+        img = 'static/img/spades.svg';
         break;
       case 'H':
-        img = 'src/img/hearts.svg';
+        img = 'static/img/hearts.svg';
         break;
       case 'D':
-        img = 'src/img/diamonds.svg';
+        img = 'static/img/diamonds.svg';
         break;
       case 'C':
-        img = 'src/img/clubs.svg';
+        img = 'static/img/clubs.svg';
         break;
     }
     return img;

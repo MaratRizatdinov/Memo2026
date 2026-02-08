@@ -9,7 +9,7 @@ export default defineConfig([
     extends: ['js/recommended'],
     languageOptions: { globals: globals.browser },
     rules: {
-      'eqeqeq': ['error', 'always'],
+      eqeqeq: ['error', 'always'],
       'no-unused-vars': 'warn',
       'prefer-const': ['error', { ignoreReadBeforeAssign: true }],
     },
