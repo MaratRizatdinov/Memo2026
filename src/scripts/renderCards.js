@@ -1,4 +1,6 @@
-export const renderCards = (cardField, state) => {  
+import { appRouter } from '..';
+
+export const renderCards = (cardField, state) => {
   const cardDeck = state.gameCards;
   let cardsContent = '';
 
@@ -30,20 +32,22 @@ export const renderCards = (cardField, state) => {
       const clickedCards = state.gameClickedCards;
       const maxClickedCardsLength = state.gamevalue * 6;
       const clickedCardIndex = cardDeck.findIndex((card) => card.id === id);
-      if (clickedCards.length === maxClickedCardsLength - 1) {
-        alert('You win');
+      if (clickedCards.length === maxClickedCardsLength - 1) {        
+        state.gameStatus = 'win';
+        appRouter(state);
       } else if (clickedCards.length % 2 === 0) {
-        clickedCards.push(state.gameCards[clickedCardIndex].name);        
+        clickedCards.push(state.gameCards[clickedCardIndex].name);
         state.gameCards[clickedCardIndex].visible = 'open';
         renderCards(cardField, state);
       } else if (
         clickedCards.at(-1) === state.gameCards[clickedCardIndex].name
       ) {
-        clickedCards.push(state.gameCards[clickedCardIndex].name);        
+        clickedCards.push(state.gameCards[clickedCardIndex].name);
         state.gameCards[clickedCardIndex].visible = 'open';
         renderCards(cardField, state);
-      } else {
-        alert('You lose');
+      } else {        
+        state.gameStatus = 'lose';
+        appRouter(state);
       }
     });
   }

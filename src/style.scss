@@ -28,6 +28,9 @@ body {
   flex-direction: column;
   align-items: center;
   box-sizing: border-box;
+  &__image {
+    margin-top: 26px;
+  }
   &__title {
     width: 208px;
     height: 96px;
@@ -38,6 +41,24 @@ body {
     letter-spacing: 0%;
     text-align: center;
     padding-top: 52px;
+    &_win {
+      width: 280px;
+      height: 48px;
+      padding-top: 9px;
+    }
+  }
+  &__text {
+    margin-top: 28px;
+    font-size: 24px;
+    font-weight: 400;
+    line-height: 32px;
+    color: #000;
+  }
+  &__time {
+    margin-top: 9px;
+    font-size: 64px;
+    font-weight: 400;
+    line-height: 72px;
   }
   &__checkbox {
     display: flex;
@@ -68,6 +89,9 @@ body {
   }
   &__button {
     margin-top: 67px;
+    &_win{
+      margin-top: 40px;
+    }
   }
 }
 .gamefield {

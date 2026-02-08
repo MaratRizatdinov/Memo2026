@@ -28,6 +28,9 @@ body {
   align-items: center;
   box-sizing: border-box;
 }
+.modal__image {
+  margin-top: 26px;
+}
 .modal__title {
   width: 208px;
   height: 96px;
@@ -38,6 +41,24 @@ body {
   letter-spacing: 0%;
   text-align: center;
   padding-top: 52px;
+}
+.modal__title_win {
+  width: 280px;
+  height: 48px;
+  padding-top: 9px;
+}
+.modal__text {
+  margin-top: 28px;
+  font-size: 24px;
+  font-weight: 400;
+  line-height: 32px;
+  color: #000;
+}
+.modal__time {
+  margin-top: 9px;
+  font-size: 64px;
+  font-weight: 400;
+  line-height: 72px;
 }
 .modal__checkbox {
   display: flex;
@@ -68,6 +89,9 @@ body {
 }
 .modal__button {
   margin-top: 67px;
+}
+.modal__button_win {
+  margin-top: 40px;
 }
 
 .gamefield {
