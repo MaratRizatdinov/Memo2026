@@ -24,7 +24,6 @@ export const getGameCards = (level) => {
   for (const suite of cardSuites) {
     for (const value of cardValues) {
       const card = {
-        id: 1,
         name: value + suite,
         value: value === 'T' ? '10' : value,
         suite: suite,
@@ -34,9 +33,16 @@ export const getGameCards = (level) => {
       cardDeck.push(card);
     }
   }
+
   const shuffleDeck = cardDeck
     .sort(() => Math.random() - 0.5)
     .slice(0, level * 3);
 
-  return shuffleDeck.concat(shuffleDeck).sort(() => Math.random() - 0.5);
+  const newDeck = shuffleDeck
+    .concat(structuredClone(shuffleDeck))
+    .sort(() => Math.random() - 0.5);  
+  const deckWithId = newDeck.map((card) =>
+    Object.assign(card, { id: crypto.randomUUID() }),
+  );  
+  return deckWithId;
 };

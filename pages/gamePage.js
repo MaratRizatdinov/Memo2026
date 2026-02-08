@@ -1,4 +1,4 @@
-import { renderCards } from "../scripts/renderCards.js";
+import { renderCards } from '../scripts/renderCards.js';
 
 export const gamePage = (appElement, state) => {
   const level =
@@ -21,11 +21,15 @@ export const gamePage = (appElement, state) => {
      `;
 
   const cardField = document.querySelector('.gamefield__cards');
-  
+
   renderCards(cardField, state);
   setTimeout(() => {
     const cardDeck = state.gameCards;
-    state.gameCards = cardDeck.map((card) => (card.visible = 'close'));
+
+    state.gameCards = cardDeck.map((card) =>
+      Object.assign(card, { visible: 'close' }),
+    );
+
     renderCards(cardField, state);
-  }, 1000);
+  }, 5000);
 };

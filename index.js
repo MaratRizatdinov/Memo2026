@@ -6,6 +6,7 @@ const state = {
   gameStatus: 'start',
   gamevalue: '',
   gameCards: [],
+  gameClickedCards: [],
 };
 
 export const appRouter = (appElement, state) => {
