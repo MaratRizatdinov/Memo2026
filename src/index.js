@@ -13,6 +13,7 @@ const state = {
   gameCards: [],
   gameClickedCards: [],
   gameTimer: 0,
+  gameTimerId: null,
 };
 
 export const appRouter = (state) => {

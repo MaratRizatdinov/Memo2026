@@ -1,6 +1,7 @@
 import { appRouter } from '..';
 
 export const losePage = (appElement, state) => {
+  clearInterval(state.gameTimerId)
   const time = Date.now() - state.gameTimer;
   const fmt = (x) =>
     new Date(x).toLocaleString('en-GB', {
@@ -18,12 +19,14 @@ export const losePage = (appElement, state) => {
     `;
   const resetButton = document.querySelector('.modal__button_win');
   resetButton.addEventListener('click', () => {
+    clearInterval(state.gameTimerId)
     state = {
       gameStatus: 'start',
       gamevalue: '',
       gameCards: [],
       gameClickedCards: [],
       gameTimer: 0,
+      gameTimerId: null,
     };
     appRouter(state);
   });

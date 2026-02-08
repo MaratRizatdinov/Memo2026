@@ -23,17 +23,20 @@ export const gamePage = (appElement, state) => {
 
   const resetButton = document.querySelector('.gamefield__button');
   resetButton.addEventListener('click', () => {
+    if (state.gameTimerId) clearInterval(state.gameTimerId);
     state = {
       gameStatus: 'start',
       gamevalue: '',
       gameCards: [],
       gameClickedCards: [],
       gameTimer: 0,
+      gameTimerId: null,
     };
     appRouter(state);
   });
 
   const cardField = document.querySelector('.gamefield__cards');
+  const timerElement = document.querySelector('.gamefield__timer');
 
   renderCards(cardField, state);
   setTimeout(() => {
@@ -43,6 +46,16 @@ export const gamePage = (appElement, state) => {
       Object.assign(card, { visible: 'close' }),
     );
     state.gameTimer = Date.now();
+    const timerId = setInterval(() => {
+      const time = Date.now() - state.gameTimer;
+      const fmt = (x) =>
+        new Date(x).toLocaleString('en-GB', {
+          minute: '2-digit',
+          second: '2-digit',
+        });
+      timerElement.innerHTML = fmt(time).replace(':', '.');      
+    }, 1000);
+    state.gameTimerId = timerId;
 
     renderCards(cardField, state);
   }, 5000);
