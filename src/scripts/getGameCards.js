@@ -6,16 +6,16 @@ export const getGameCards = (level) => {
     let img = '';
     switch (suite) {
       case 'S':
-        img = './img/spades.svg';
+        img = 'src/img/spades.svg';
         break;
       case 'H':
-        img = './img/hearts.svg';
+        img = 'src/img/hearts.svg';
         break;
       case 'D':
-        img = './img/diamonds.svg';
+        img = 'src/img/diamonds.svg';
         break;
       case 'C':
-        img = './img/clubs.svg';
+        img = 'src/img/clubs.svg';
         break;
     }
     return img;
@@ -40,9 +40,9 @@ export const getGameCards = (level) => {
 
   const newDeck = shuffleDeck
     .concat(structuredClone(shuffleDeck))
-    .sort(() => Math.random() - 0.5);  
+    .sort(() => Math.random() - 0.5);
   const deckWithId = newDeck.map((card) =>
     Object.assign(card, { id: crypto.randomUUID() }),
-  );  
+  );
   return deckWithId;
 };

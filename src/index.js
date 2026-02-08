@@ -1,5 +1,7 @@
 import { selectPage } from './pages/selectPage.js';
 import { gamePage } from './pages/gamePage.js';
+
+
 const appElement = document.querySelector('.app');
 
 const state = {

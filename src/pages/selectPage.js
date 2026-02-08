@@ -1,5 +1,6 @@
 import { appRouter } from '../index.js';
 import { getGameCards } from '../scripts/getGameCards.js';
+
 export const selectPage = (appElement, state) => {
   appElement.innerHTML = `
      <div class="modal modal_start">
@@ -44,7 +45,7 @@ export const selectPage = (appElement, state) => {
       if (!inputElement.checked) continue;
       state.gamevalue = inputElement.value;
       state.gameStatus = 'game';
-      state.gameCards =getGameCards(inputElement.value)
+      state.gameCards = getGameCards(inputElement.value);
       appRouter(appElement, state);
       break;
     }

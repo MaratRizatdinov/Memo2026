@@ -18,7 +18,7 @@ export const renderCards = (cardField, state) => {
       </div>
     </div> `;
     } else {
-      cardsContent += `<div class="card card_close" data-card =${card.name} data-id =${card.id}> <img src="./img/рубашка.svg" alt="рубашка"></div>`;
+      cardsContent += `<div class="card card_close" data-card =${card.name} data-id =${card.id}> <img src="src/img/рубашка.svg" alt="рубашка"></div>`;
     }
   }
   cardField.innerHTML = cardsContent;

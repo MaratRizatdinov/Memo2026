@@ -7,7 +7,7 @@
   src:
     local('StratosSkyeng'),
     url('./fonts/stratosskyengweb-regular.woff2') format('woff2'),
-    url('//fonts/stratosskyengweb-regular.woff') format('woff');
+    url('./fonts/stratosskyengweb-regular.woff') format('woff');
   font-weight: normal;
 }
 
@@ -117,18 +117,18 @@ body {
   }
   &__cards {
     box-sizing: border-box;
-    margin-top: 35px;    
-    display: grid;    
+    margin-top: 35px;
+    display: grid;
     gap: 15px;
     justify-content: center;
     align-items: center;
-    &_easy{
+    &_easy {
       grid-template-columns: repeat(3, 1fr);
     }
-    &_medium{
+    &_medium {
       grid-template-columns: repeat(4, 1fr);
     }
-    &_hard{
+    &_hard {
       grid-template-columns: repeat(6, 1fr);
     }
   }
