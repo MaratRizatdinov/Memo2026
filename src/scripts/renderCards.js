@@ -1,4 +1,4 @@
-import { appRouter } from '..';
+import { appRouter } from './appRouter';
 
 export const renderCards = (cardField, state) => {
   const cardDeck = state.gameCards;
@@ -32,8 +32,9 @@ export const renderCards = (cardField, state) => {
       const clickedCards = state.gameClickedCards;
       const maxClickedCardsLength = state.gamevalue * 6;
       const clickedCardIndex = cardDeck.findIndex((card) => card.id === id);
+      
       if (clickedCards.length === maxClickedCardsLength - 1) {
-        state.gameStatus = 'win';        
+        state.gameStatus = 'win';
         appRouter(state);
       } else if (clickedCards.length % 2 === 0) {
         clickedCards.push(state.gameCards[clickedCardIndex].name);

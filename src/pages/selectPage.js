@@ -1,4 +1,4 @@
-import { appRouter } from '../index.js';
+import { appRouter } from '../scripts/appRouter.js';
 import { getGameCards } from '../scripts/getGameCards.js';
 
 export const selectPage = (appElement, state) => {

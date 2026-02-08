@@ -1,5 +1,6 @@
+import { initState } from '../constatnts/initState.js';
+import { appRouter } from '../scripts/appRouter.js';
 import { renderCards } from '../scripts/renderCards.js';
-import { appRouter } from '../index.js';
 
 export const gamePage = (appElement, state) => {
   const level =
@@ -24,14 +25,7 @@ export const gamePage = (appElement, state) => {
   const resetButton = document.querySelector('.gamefield__button');
   resetButton.addEventListener('click', () => {
     if (state.gameTimerId) clearInterval(state.gameTimerId);
-    state = {
-      gameStatus: 'start',
-      gamevalue: '',
-      gameCards: [],
-      gameClickedCards: [],
-      gameTimer: 0,
-      gameTimerId: null,
-    };
+    state = initState;
     appRouter(state);
   });
 
@@ -53,7 +47,7 @@ export const gamePage = (appElement, state) => {
           minute: '2-digit',
           second: '2-digit',
         });
-      timerElement.innerHTML = fmt(time).replace(':', '.');      
+      timerElement.innerHTML = fmt(time).replace(':', '.');
     }, 1000);
     state.gameTimerId = timerId;
 
